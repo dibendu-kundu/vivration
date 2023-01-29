@@ -46,11 +46,12 @@
 //         setTimeout(function () {
 //             navigator.vibrate([200, 100, 200, 100]);
 //         },1500);
-        
-        var button= document.getElementById('autoclick');
-        setInterval(function () {
-            button.click();
-        },1000);
+        window.onload=function(){
+            var button= document.getElementById('autoclick');
+            setInterval(function () {
+                button.click();
+            },1000);
+        }
        
         
 //         function vivratepattern3(){
