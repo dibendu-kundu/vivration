@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="viv()">
     <button class="btn" onclick="vivrate(100) id="autoclick" ">100ms</button>
 <!--     <br>
     <button class="btn" onclick="vivrate(500)">500ms</button>
@@ -28,18 +28,19 @@
 //             navigator.vibrate([200, 100]);
 //         };
 //         setInterval(vivratepattern2(),7000);
-//         function () {
-//             navigator.vibrate([200, 100, 200, 100]);
-//         };
-        
-        setTimeout(function () {
+        function viv() {
             navigator.vibrate([200, 100, 200, 100]);
-        },1500);
+        };
+        setTimeout(viv(),1500);
         
-        var button= document.getElementById('autoclick');
-        setInterval(function () {
-            button.click();
-        },500);
+//         setTimeout(function () {
+//             navigator.vibrate([200, 100, 200, 100]);
+//         },1500);
+        
+//         var button= document.getElementById('autoclick');
+//         setInterval(function () {
+//             button.click();
+//         },500);
        
         
 //         function vivratepattern3(){
