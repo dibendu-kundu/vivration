@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<!--     <button class="btn" onclick="vivrate(100)">100ms</button>
+    <button class="btn" onclick="vivrate(100)">100ms</button>
     <br>
     <button class="btn" onclick="vivrate(500)">500ms</button>
     <br>
@@ -17,7 +17,7 @@
     <br>
     <button class="btn" onclick="vivratepattern3()">3 pulse</button>
     <br>
-    <button class="btn" onclick="vivratepattern4()">4 pulse</button> -->
+    <button class="btn" onclick="vivratepattern4()">4 pulse</button>
 
     <script>
 //         function vivrate(ms){
@@ -27,10 +27,14 @@
 //         function vivratepattern1(){
 //             navigator.vibrate([200, 100]);
 //         };
-        setInterval(vivratepattern2(),7000);
-        function vivratepattern2(){
+//         setInterval(vivratepattern2(),7000);
+//         function vivratepattern2(){
+//             navigator.vibrate([200, 100, 200, 100]);
+//         };
+        
+        setInterval(function () {
             navigator.vibrate([200, 100, 200, 100]);
-        };
+        },5000);
         
 //         function vivratepattern3(){
 //             navigator.vibrate([200, 100, 200, 100, 200, 100]);
