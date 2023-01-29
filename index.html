@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="btn" onclick="vivrate(100) id="autoclick" ">100ms</button>
+    <button class="btn" onclick="vivrate(100)" id="autoclick" ">100ms</button>
 <!--     <br>
     <button class="btn" onclick="vivrate(500)">500ms</button>
     <br>
@@ -20,6 +20,11 @@
     <button class="btn" onclick="vivratepattern4()">4 pulse</button> -->
 
     <script>
+        
+        var button= document.getElementById('autoclick');
+            setInterval(function () {
+                button.click();
+            },1000);
         function vivrate(ms){
             navigator.vibrate(ms);
         };
@@ -46,12 +51,6 @@
 //         setTimeout(function () {
 //             navigator.vibrate([200, 100, 200, 100]);
 //         },1500);
-        window.onload=function(){
-            var button= document.getElementById('autoclick');
-            setInterval(function () {
-                button.click();
-            },1000);
-        }
        
         
 //         function vivratepattern3(){
