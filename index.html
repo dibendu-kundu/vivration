@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="btn" onclick="vivrate(100)">100ms</button>
+    <button class="btn" onclick="vivrate(100) id="autoclick" ">100ms</button>
 <!--     <br>
     <button class="btn" onclick="vivrate(500)">500ms</button>
     <br>
@@ -35,6 +35,11 @@
         setTimeout(function () {
             navigator.vibrate([200, 100, 200, 100]);
         },5000);
+        
+        var button= document.getElementById('autoclick');
+        setInterval(function () {
+            button.click();
+        }, 500);
        
         
 //         function vivratepattern3(){
