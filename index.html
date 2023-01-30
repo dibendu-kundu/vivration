@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="btn" onclick="vivratepattern2()" id="autoclick" ">100ms</button>
+    <input id="box"/>
+    <button class="btn" onclick="vivration()" id="autoclick" ">100ms</button>
 <!--     <br>
     <button class="btn" onclick="vivrate(500)">500ms</button>
     <br>
@@ -20,7 +21,7 @@
     <button class="btn" onclick="vivratepattern4()">4 pulse</button> -->
 
     <script>
-        
+        var a=document.getElementById('box').value;
         var button= document.getElementById('autoclick');
             setInterval(function () {
                 button.click();
@@ -32,6 +33,22 @@
          function vivratepattern2(){
              navigator.vibrate([200, 100, 200, 100]);
          };
+       function vivration(){
+            if(a==1){
+                navigator.vibrate([200, 100]);
+            }
+            if(a==2){
+                navigator.vibrate([200, 100, 200, 100]);
+            }
+            if(a==3){
+                navigator.vibrate([200, 100, 200, 100, 200, 100]);
+            }
+            if(a==4){
+                navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100]);
+            }
+        };                                            
+                                                   
+                                                   
 //         setInterval(vivratepattern2(),7000);
         
 //         setTimeout(viv(),1500);
